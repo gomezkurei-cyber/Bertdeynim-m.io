@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Website 💙</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* FIRST PAGE */
+
+.page1{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#fff0f5;
+    text-align:center;
+}
+
+.cat{
+    width:220px;
+    margin-bottom:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#yesBtn{
+    background:#4CAF50;
+    color:white;
+}
+
+#noBtn{
+    background:#ff4d6d;
+    color:white;
+}
+
+/* SECOND PAGE */
+
+.page2{
+    display:none;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(to bottom,#6fa8ff,#b7d4ff);
+    position:relative;
+    overflow:auto;
+    text-align:center;
+    color:white;
+}
+
+.rose{
+    position:absolute;
+    font-size:50px;
+}
+
+.r1{top:20px;left:20px;}
+.r2{top:20px;right:20px;}
+.r3{bottom:20px;left:20px;}
+.r4{bottom:20px;right:20px;}
+
+.content{
+    margin-top:50px;
+}
+
+.photo{
+    width:250px;
+    height:250px;
+    border-radius:20px;
+    border:5px solid white;
+    object-fit:cover;
+    margin-top:20px;
+}
+
+.message{
+    max-width:700px;
+    margin:30px auto;
+    font-size:22px;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page1" id="page1">
+
+    <!-- Replace this with your cat kiss GIF -->
+    <img class="cat"
+    src="https://media.tenor.com/4N4Qm0F2Fj4AAAAC/cat-kiss.gif"
+    alt="Cat Kiss">
+
+    <h1>Do you want to see my present for you? 💖</h1>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="showGift()">YES 💕</button>
+        <button id="noBtn" onclick="growYes()">NO 😭</button>
+    </div>
+
+</div>
+
+<div class="page2" id="page2">
+
+    <div class="rose r1">🌹</div>
+    <div class="rose r2">🌹</div>
+    <div class="rose r3">🌹</div>
+    <div class="rose r4">🌹</div>
+
+    <div class="content">
+
+        <h1>Happy Birthday My Love 💙</h1>
+
+        <!-- Replace herphoto.jpg with her picture -->
+        <img src="mygirlfriend.jpg"
+        class="photo"
+        alt="Her Photo">
+
+        <div class="message">
+            Dear My Love,<br><br>
+
+            Happy Birthday to the most beautiful girl in my life. 💙
+
+            Thank you for always making me happy, supporting me,
+            and filling my days with love and laughter.
+
+            I hope this year brings you happiness,
+            success, and all the things your heart desires.
+
+            I love you so much. 🌹💙
+
+            <br><br>
+            - Your Boyfriend 💌
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+let size = 1;
+
+function growYes(){
+    size += 0.4;
+
+    document.getElementById("yesBtn").style.transform =
+    `scale(${size})`;
+
+    if(size >= 3){
+        document.getElementById("noBtn").style.display =
+        "none";
+    }
+}
+
+function showGift(){
+    document.getElementById("page1").style.display =
+    "none";
+
+    document.getElementById("page2").style.display =
+    "block";
+}
+</script>
+
+</body>
+</html>
